@@ -1,0 +1,12 @@
+        <svg
+          class="contact-icon"
+          xmlns="http://www.w3.org/2000/svg"
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+          fill="currentColor"
+        >
+          <path
+            d="M12 13.065l-11.707-8.065h23.414l-11.707 8.065zm0 2.435l-12-8.28v12.78h24v-12.78l-12 8.28z"
+          />
+        </svg>
