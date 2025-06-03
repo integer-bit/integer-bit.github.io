@@ -1,0 +1,17 @@
+{
+  "name": "integer-bit.github.io",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "predeploy": "bun build",
+    "deploy": "gh-pages -d dist"
+  },
+  "devDependencies": {
+    "gh-pages": "^6.3.0",
+    "typescript": "~5.8.3",
+    "vite": "^6.3.5"
+  }
+}

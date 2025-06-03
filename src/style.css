@@ -1,0 +1,231 @@
+/* styles.css */
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap");
+
+/* Color Palette */
+:root {
+  --primary-purple: #a29bfe;    /* Light purple */
+  --secondary-purple: #edebff;  /* Very light purple background */
+  --text-gray: #333333;
+  --background-white: #ffffff;
+  --border-gray: #dddddd;
+}
+
+/* Global Styles */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Inter", sans-serif;
+  color: var(--text-gray);
+  background-color: var(--secondary-purple);
+  line-height: 1.6;
+  padding: 1rem;
+}
+
+/* Center content and constrain width */
+main,
+header,
+section {
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Header */
+header {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+header h1 {
+  font-family: "Inter", sans-serif;
+  color: var(--primary-purple);
+  font-size: 2.5rem;
+  margin-bottom: 0.25rem;
+}
+
+header p {
+  color: var(--text-gray);
+  font-size: 1.1rem;
+}
+
+/* Section Titles */
+section h2 {
+  font-family: "Inter", sans-serif;
+  font-size: 1.75rem;
+  color: var(--primary-purple);
+  margin-bottom: 0.75rem;
+  border-bottom: 2px solid var(--primary-purple);
+  padding-bottom: 0.25rem;
+}
+
+/* Paragraphs */
+section p {
+  margin-bottom: 1rem;
+}
+
+/* Skills & Technologies List */
+.tech-icon {
+  width: 17px;
+  height: 17px;
+  vertical-align: text-bottom;
+}
+
+#skills ul {
+  list-style-type: none;
+  padding-left: 0;
+}
+
+#skills ul > li {
+  margin-bottom: 1rem;
+}
+
+#skills ul > li strong {
+  display: block;
+  font-size: 1.1rem;
+  margin-bottom: 0.25rem;
+  color: var(--text-gray);
+}
+
+#skills ul li ul {
+  list-style-type: disc;
+  margin-left: 1.5rem;
+}
+
+#skills li ul li {
+  margin-bottom: 0.25rem;
+}
+
+/* Project Cards */
+.project-card {
+  background-color: var(--background-white);
+  border: 1px solid var(--border-gray);
+  border-radius: 8px;
+  padding: 1rem;
+  margin-bottom: 1.5rem;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+}
+
+.project-card h3 {
+  color: var(--primary-purple);
+  margin-bottom: 0.5rem;
+}
+
+.project-card p {
+  color: var(--text-gray);
+  font-size: 0.95rem;
+  margin-bottom: 0;
+  line-height: 1.4;
+}
+
+/* Basic “tag” styling for project statuses */
+.tag {
+  display: inline-block;
+  font-size: 0.75rem;
+  font-weight: 600;
+  padding: 0.2rem 0.5rem;
+  border-radius: 4px;
+  margin-left: 0.5rem;
+  text-transform: uppercase;
+  color: #fff;
+}
+
+.tag.sold {
+  background-color: #6c5ce7;  /* darker purple */
+}
+
+.tag.private {
+  background-color: #ff7675;  /* red-ish */
+}
+
+.tag.abandoned {
+  background-color: #b2bec3;  /* gray */
+}
+
+.tag.public {
+  background-color: #00b894;  /* green */
+}
+
+.tag.dormant {
+  background-color: #0984e3;  /* blue */
+}
+
+.tag:hover {
+  opacity: 0.85;
+}
+
+/* Contact List (icon-based) */
+.contact-list {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  gap: 1rem;                /* space between icons */
+  justify-content: center;  /* center horizontally */
+  margin-top: 1rem;
+}
+
+.contact-list li {
+  display: inline-block;
+}
+
+/* Make each link a circle container */
+.contact-list a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;             /* 40×40 circle */
+  height: 40px;
+  border-radius: 50%;
+  text-decoration: none;
+  transition: background-color 0.2s ease-in-out;
+}
+
+/* Base icon sizing for Devicon <i> and inline SVG/IMG */
+.contact-icon {
+  font-size: 24px;         /* for Devicon <i> */
+  width: 24px;             /* for <img> or inline <svg> */
+  height: 24px;
+  transition: color 0.2s ease-in-out;
+  vertical-align: middle;
+}
+
+/* Default colors */
+/* GitHub icon uses primary purple */
+.contact-link.github .contact-icon {
+  color: var(--primary-purple);
+}
+
+/* Other icons (Discord + Email) use a lighter purple */
+.contact-link.other .contact-icon {
+  color: #b2acde;
+}
+
+/* Hover: GitHub link → dark purple circle, white icon */
+.contact-link.github:hover {
+  background-color: var(--primary-purple);
+}
+.contact-link.github:hover .contact-icon {
+  color: #ffffff;
+}
+
+/* Hover: Other links → lighter‐purple circle, white icon */
+.contact-link.other:hover {
+  background-color: #b2acde;
+}
+.contact-link.other:hover .contact-icon {
+  color: #ffffff;
+}
+
+/* Responsive Typography */
+@media (max-width: 600px) {
+  header h1 {
+    font-size: 2rem;
+  }
+
+  section h2 {
+    font-size: 1.5rem;
+  }
+}
